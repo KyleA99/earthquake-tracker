@@ -1,0 +1,20 @@
+{
+  "name": "earthquake-tracker",
+  "version": "1.0.0",
+  "description": "This web application fetches live earthquake data from the USGS API, stores it in a MongoDB database, and presents it to users through a dynamic and interactive frontend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "HTTPS: https://github.com/KyleA99/earthquake-tracker"
+  },
+  "keywords": [
+    "geology",
+    "seismic",
+    "usgs"
+  ],
+  "author": "",
+  "license": "ISC"
+}
