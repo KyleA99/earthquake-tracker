@@ -7,4 +7,7 @@ const EarthquakeSchema = new mongoose.Schema({
     coordinates: [Number]
 });
 
-module.exports = mongoose.model('Earthquake', EarthquakeSchema);
+// Create a Mongoose model based on the schema
+const Earthquake = mongoose.model('Earthquake', EarthquakeSchema);
+
+export default Earthquake;
