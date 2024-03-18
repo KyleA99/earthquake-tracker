@@ -20,7 +20,8 @@ export async function connectToDatabase() {
     return client.db("EarthquakeDataCluster");
   } catch (err) {
     console.error("Failed to connect to MongoDB:", err);
-    throw err; // Rethrow the error to be handled by the caller
+    throw err;
   }
 }
+
 connectToDatabase();
