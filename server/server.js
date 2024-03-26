@@ -1,3 +1,4 @@
+// This hasnt been updated since moving mongo to local.
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";

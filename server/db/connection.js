@@ -2,7 +2,6 @@ import mongoose from 'mongoose';
 import dotenv from "dotenv";
 dotenv.config({ path: '../../config.env' });
 
-// Connection URI
 const uri = process.env.LOCAL_URI;
 
 async function connectToDatabase() {
