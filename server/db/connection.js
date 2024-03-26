@@ -10,8 +10,6 @@ async function connectToDatabase() {
         console.log('Connected to MongoDB!!!');
 
         // Import schema/model here?  Check other branches for that code...
-        // const schema = new mongoose.Schema({ ... });
-        // const Model = mongoose.model('Model', schema);
     } catch (error) {
         console.error('Error connecting to MongoDB:', error);
     }
