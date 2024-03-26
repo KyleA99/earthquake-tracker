@@ -14,8 +14,6 @@ async function connectToDatabase() {
     try {
         await mongoose.connect(uri, {});
         console.log('Connected to MongoDB!!!');
-
-        // Import schema/model here?  Check other branches for that code...
     } catch (error) {
         console.error('Error connecting to MongoDB:', error);
     }
