@@ -6,8 +6,7 @@ dotenv.config();
 // Use later...
 // import records from "./routes/record.js";
 
-// We changed port number when moving to local hosting...
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.EXPRESS_PORT || 3000;
 const app = express();
 
 app.use(cors());
