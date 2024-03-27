@@ -6,4 +6,6 @@ services:
     container_name: mongodb
     ports:
       - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: earthquake_db_dev
     restart: always

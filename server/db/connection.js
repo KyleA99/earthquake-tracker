@@ -2,7 +2,11 @@ import mongoose from 'mongoose';
 import dotenv from "dotenv";
 dotenv.config({ path: '../../config.env' });
 
-const uri = process.env.LOCAL_URI;
+const mongoHost = process.env.MONGO_HOST || 'localhost';
+const mongoPort = process.env.MONGO_PORT || 27017;
+const databaseName = process.env.DB_Name || 'test';
+
+const uri = `mongodb://${mongoHost}:${mongoPort}/${databaseName}`;
 
 /**
  * Connects to the MongoDB database.
