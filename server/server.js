@@ -1,7 +1,7 @@
 // This hasnt been updated since moving mongo to local.
-import express from "express";
-import cors from "cors";
-import dotenv from "dotenv";
+import express from 'express';
+import cors from 'cors';
+import dotenv from 'dotenv';
 dotenv.config();
 // Use later...
 // import records from "./routes/record.js";
