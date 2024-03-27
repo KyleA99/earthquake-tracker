@@ -14,15 +14,18 @@ const uri = `mongodb://${mongoHost}:${mongoPort}/${databaseName}`;
  * @function connectToDatabase
  * @returns {Promise} A Promise that resolves once the connection is established.
  */
-async function connectToDatabase() {
+export async function connectToDatabase() {
     try {
         await mongoose.connect(uri, {});
         console.log('Connected to MongoDB!!!');
 
-        // Import schema/model here?  Check other branches for that code...
+        // Return a resolved promise to indicate successful connection
+        return Promise.resolve();
     } catch (error) {
         console.error('Error connecting to MongoDB:', error);
+        // Return a rejected promise to indicate connection failure
+        return Promise.reject(error);
     }
 }
 
-connectToDatabase();
+// connectToDatabase();
