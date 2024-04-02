@@ -1,11 +1,11 @@
 import express from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
 import { connectToDatabase } from './db/connection.js';
+import dotenv from 'dotenv';
+dotenv.config({ path: '../config.env' });
+
 // Use later...
 // import records from "./routes/record.js";
-
-dotenv.config();
 
 const PORT = process.env.EXPRESS_PORT || 3000;
 const app = express();
