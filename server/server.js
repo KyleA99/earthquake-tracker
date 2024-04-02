@@ -4,15 +4,13 @@ import { connectToDatabase } from './db/connection.js';
 import dotenv from 'dotenv';
 dotenv.config({ path: '../config.env' });
 
-// Use later...
-// import records from "./routes/record.js";
-
 const PORT = process.env.EXPRESS_PORT || 3000;
+// console.log(process.env.EXPRESS_PORT);
+// console.log(PORT);
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-// app.use("/record", records);
 
 connectToDatabase()
   .then(() => {
