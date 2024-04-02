@@ -28,4 +28,5 @@ export async function connectToDatabase() {
     }
 }
 
-// connectToDatabase();
+// Export MongoDB connection URI
+export { uri };
