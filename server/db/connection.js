@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-dotenv.config({ path: '../../config.env' });
+dotenv.config({ path: '../config.env' });
 
 const mongoHost = process.env.MONGO_HOST || 'localhost';
 const mongoPort = process.env.MONGO_PORT || 27017;
