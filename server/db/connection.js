@@ -5,6 +5,7 @@ dotenv.config({ path: '../../config.env' });
 const mongoHost = process.env.MONGO_HOST || 'localhost';
 const mongoPort = process.env.MONGO_PORT || 27017;
 const databaseName = process.env.DB_NAME || 'test';
+console.log(databaseName);
 
 const uri = `mongodb://${mongoHost}:${mongoPort}/${databaseName}`;
 
@@ -28,5 +29,4 @@ export async function connectToDatabase() {
     }
 }
 
-// Export MongoDB connection URI
 export { uri };
