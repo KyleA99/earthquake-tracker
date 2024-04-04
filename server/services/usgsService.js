@@ -1,4 +1,4 @@
-import http from 'http';
+import https from 'https';
 
 /**
  * Fetch earthquake data from USGS API.
@@ -10,7 +10,7 @@ export async function fetchEarthquakeData(parameters) {
   const url = `https://earthquake.usgs.gov/fdsnws/event/1/query?${new URLSearchParams(parameters).toString()}`;
 
   return new Promise((resolve, reject) => {
-    http.get(url, (res) => {
+    https.get(url, (res) => {
       let data = '';
       res.on('data', (chunk) => {
         data += chunk;
@@ -18,6 +18,7 @@ export async function fetchEarthquakeData(parameters) {
       res.on('end', () => {
         try {
           const jsonData = JSON.parse(data);
+          // console.log(jsonData);
           resolve(jsonData.features);
         } catch (error) {
           reject(new Error('Error parsing earthquake data'));
