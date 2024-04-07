@@ -3,7 +3,14 @@ import cors from 'cors';
 import { connectToDatabase } from './db/connection.js';
 import earthquakeRouter from './routes/earthquakeRoutes.js';
 import dotenv from 'dotenv';
-dotenv.config({ path: '../config.env' });
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+dotenv.config({ path: path.join(__dirname, '../config.env') });
 
 // const databaseName = process.env.DB_NAME || 'test';
 // console.log(databaseName);
