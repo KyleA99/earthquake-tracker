@@ -4,7 +4,7 @@ const earthquakeSchema = new mongoose.Schema({
     magnitude: Number,
     location: String,
     time: Date,
-    coordinates: [Number]
+    coordinates: [[Number]]
 });
 
 // Create a Mongoose model based on the schema
