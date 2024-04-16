@@ -5,7 +5,7 @@ const earthquakeSchema = new mongoose.Schema({
     location: String,
     time: Date,
     coordinates: {
-        type: [Number],
+        type: [[Number]],
         required: true,
         index: '2dsphere' // Indexing for geospatial queries
     }
