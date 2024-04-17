@@ -16,7 +16,6 @@ dotenv.config({ path: path.join(__dirname, '../config.env') });
 // console.log(databaseName);
 
 const PORT = process.env.EXPRESS_PORT || 3000;
-console.log(process.env.EXPRESS_PORT);
 console.log(PORT);
 const app = express();
 
