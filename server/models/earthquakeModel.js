@@ -4,11 +4,9 @@ const earthquakeSchema = new mongoose.Schema({
     magnitude: Number,
     location: String,
     time: Date,
-    coordinates: {
-        type: [[Number]],
-        required: true,
-        index: '2dsphere' // Indexing for geospatial queries
-    }
+    coordinates: { type: { type: String, default: "Point" },
+        coordinates: { type: [Number], required: true }
+    },
 });
 
 // Create a Mongoose model based on the schema
