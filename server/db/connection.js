@@ -33,5 +33,3 @@ export async function connectToDatabase() {
         return Promise.reject(error);
     }
 }
-
-// export { uri };
