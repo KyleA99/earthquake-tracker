@@ -40,7 +40,7 @@ export async function fetchAndStoreEarthquakeData(req, res) {
       await EarthquakeModel.insertMany(earthquakesToInsert);
 
       // Verify data insertion by querying the database
-      const insertedData = await Earthquake.find({});
+      const insertedData = await EarthquakeModel.find({});
       console.log('Inserted earthquake data:', insertedData);
   
       res.status(200).json({ message: 'Earthquake data fetched and stored successfully.' });
