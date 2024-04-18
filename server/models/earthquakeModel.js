@@ -10,6 +10,6 @@ const earthquakeSchema = new mongoose.Schema({
 });
 
 // Create a Mongoose model based on the schema
-const Earthquake = mongoose.model('Earthquake', earthquakeSchema);
+const EarthquakeModel = mongoose.model('Earthquake', earthquakeSchema);
 
-export default Earthquake;
+export default EarthquakeModel;

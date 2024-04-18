@@ -1,4 +1,4 @@
-import Earthquake from '../models/earthquakeModel.js';
+import EarthquakeModel from '../models/earthquakeModel.js';
 import { fetchEarthquakeData } from '../services/usgsService.js';
 import { connectToDatabase } from '../db/connection.js';
 
@@ -37,7 +37,7 @@ export async function fetchAndStoreEarthquakeData(req, res) {
       }));
   
       // Store data in mongodb
-      await Earthquake.insertMany(earthquakesToInsert);
+      await EarthquakeModel.insertMany(earthquakesToInsert);
 
       // Verify data insertion by querying the database
       const insertedData = await Earthquake.find({});
