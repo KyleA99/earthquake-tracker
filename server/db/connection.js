@@ -9,13 +9,6 @@ const __dirname = dirname(__filename);
 
 dotenv.config({ path: path.join(__dirname, '../../config.env') });
 
-const mongoHost = process.env.MONGO_HOST || 'localhost';
-const mongoPort = process.env.MONGO_PORT || 27017;
-const databaseName = process.env.DB_NAME || 'test';
-console.log(databaseName);
-
-const uri = `mongodb://${mongoHost}:${mongoPort}/${databaseName}`;
-
 /**
  * Connects to the MongoDB database.
  * @async
@@ -24,6 +17,11 @@ const uri = `mongodb://${mongoHost}:${mongoPort}/${databaseName}`;
  */
 export async function connectToDatabase() {
     try {
+        const mongoHost = process.env.MONGO_HOST || 'localhost';
+        const mongoPort = process.env.MONGO_PORT || 27017;
+        const databaseName = process.env.DB_NAME || 'test';
+        const uri = `mongodb://${mongoHost}:${mongoPort}/${databaseName}`;
+
         await mongoose.connect(uri, {});
         console.log('Connected to MongoDB!!!');
 
@@ -36,4 +34,4 @@ export async function connectToDatabase() {
     }
 }
 
-export { uri };
+// export { uri };
