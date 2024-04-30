@@ -2,6 +2,12 @@ import EarthquakeModel from '../models/earthquakeModel.js';
 import { fetchEarthquakeData } from '../services/usgsService.js';
 import { connectToDatabase } from '../db/connection.js';
 
+/**
+ * Fetches earthquake data from USGS API and stores it in MongoDB.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @returns {Promise<void>} A Promise that resolves when data fetching and storing is complete.
+ */
 export async function fetchAndStoreEarthquakeData(req, res) {
     try {
       await connectToDatabase();
